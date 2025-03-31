@@ -1,0 +1,22 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Training plans - read for all, write for admin
+    match /training_plans/{planId} {
+      allow read: if true;
+      allow write: if request.auth.token.admin == true;
+    }
+    
+    // Game schedule - read for all, write for admin
+    match /game_schedule/{gameId} {
+      allow read: if true;
+      allow write: if request.auth.token.admin == true;
+    }
+    
+    // User profiles
+    match /users/{userId} {
+      allow read, update, delete: if request.auth.uid == userId;
+      allow create: if true;
+    }
+  }
+}
