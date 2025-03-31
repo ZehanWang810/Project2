@@ -29,11 +29,6 @@ The complete design documentation including mockups and module diagrams can be f
 2. Install dependencies: `npm install`
 3. Start development server: `npm start`
 
-## Future Improvements
-- Resolve the post-load UI bug
-- Add form validation
-- Implement additional error handling
-- Enhance the user interface
 
 ## Submission Notes
 I apologize for the late submission and for not fully meeting all project requirements. I've worked to implement the core functionality but recognize there are areas needing improvement, particularly with the UI bug. I appreciate your understanding and any feedback you can provide to help me improve.s/troubleshooting#npm-run-build-fails-to-minify)
